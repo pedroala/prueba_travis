@@ -7,6 +7,7 @@ RSpec.describe Point do
 
   context "# almacenamiento de las coordenadas" do
     it "Se almacena correctamente la coordenada X" do
+      p0 = Point::Point.new(2,2)
       p1 = Point::Point.new(1,1)
       expect(p1.x).to eq(1)
     end
