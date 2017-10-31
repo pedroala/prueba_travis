@@ -1,8 +1,7 @@
 # Point
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/point`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Creación de una gema con la clase que representa un punto en el espacio bidimensional.
+Permite estudiar los conceptos de programación orientada a objetos.
 
 ## Installation
 
@@ -22,7 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Las instrucciones de uso son simples, se trata de una pareja de coordenas (x,y).
 
 ## Development
 
@@ -32,4 +31,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/point.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ULL-ESIT-LPP-1718/point.git 
