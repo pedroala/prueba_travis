@@ -1,5 +1,3 @@
-# Añadiendo cambios para comprobar que funciona la integración continua Travis CI
-
 require "spec_helper"
 
 
@@ -20,6 +18,64 @@ RSpec.describe Point do
     end
   end # context
 
+
+  context "# herencia" do
+    before :each do
+      @p1 = Point::Point.new(1,1)
+    end    
+    
+    it "un objeto punto es una instancia de la clase Point" do
+       expect(@p1).to be_an_instance_of(Point::Point) # =>@p1.instance_of?(Point) # passes
+    end
+
+    it "un objeto punto no es una instancia de la clase Object" do
+       expect(@p1).not_to be_an_instance_of(Object) # =>@p1.instance_of?(Object) # fails
+    end
+
+    it "un objeto punto no es una instancia de la clase BasicObject" do
+       expect(@p1).not_to be_an_instance_of(BasicObject) # =>@p1.instance_of?(BasicObject) # fails
+    end
+
+    it "un punto es un Point" do
+       expect(@p1).to be_a_kind_of(Point::Point) # =>@p1.kind_of?(Point) # passes
+    end
+
+    it "un punto es un Object" do
+       expect(@p1).to be_a_kind_of(Object) # =>@p1.kind_of?(Object) # passes
+    end
+
+    it "un punto es un BasicObject" do
+       expect(@p1).to be_a_kind_of(BasicObject) # =>@p1.kind_of?(BasicObject) # passes
+    end
+  end
+
+  context "# tipo" do
+    before :each do
+      @p1 = Point::Point.new(1,1)
+    end    
+    
+    it "un objeto punto responde al método x" do
+       expect(@p1).to respond_to(:x) # pass if @p1.respond_to?(:x)
+    end
+
+    it "un objeto punto responde al método y" do
+       expect(@p1).to respond_to(:y) # pass if @p1.respond_to?(:y)
+    end
+
+    it "un objeto punto responde a los métodos x e y" do
+       expect(@p1).to respond_to(:x, :y) # pass if @p1.respond_to?(:x) &&@ p1.respond_to(:y)
+    end
+
+    it "un objeto punto responde al método +" do
+       expect(@p1).to respond_to('+') # pass if @p1.respond_to?('+') 
+    end
+
+    it "un objeto punto responde al método + con un argumento" do
+       expect(@p1).to respond_to('+').with(1).arguments 
+    end
+    
+  end
+ 
   context "# producto por un escalar" do
     before :each do
       @p1 = Point::Point.new(1,1)
