@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "http://mygemserver.com"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."  
+      "public gem pushes."   
   end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
