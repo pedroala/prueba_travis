@@ -1,5 +1,6 @@
 # Point
 
+c
 C
 C
 p
